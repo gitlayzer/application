@@ -1,4 +1,4 @@
-## kubez-ansible 集成程序说明
+# kubez-ansible 集成程序说明
 
 ### 1：集成说明（以为 Jenkins 为例子）
 
@@ -29,7 +29,6 @@ jenkins:
 ```yaml
 # ################## 需要注意的是，这个文件中的配置的一些缩进与归属，上面的 YAML 我们需要放置到文件的顶头如下 ##################
 charts:
-  ......
   # 这里是我们要集成的应用的 Charts 需要传递的参数
   jenkins:
     name: jenkins
@@ -89,12 +88,10 @@ jenkins_path: pixiuio/jenkins
 jenkins_version: 4.12.0
 
 enable_charts:
-  ...
   - name: jenkins
     enabled: "{{ enable_jenkins | bool }}"
 
 charts:
-  ...
   # 这里是我们要集成的应用的 Charts 需要传递的参数
   jenkins:
     name: jenkins
@@ -147,7 +144,6 @@ charts:
 enable_jenkins: "no"
 
 kube_applications:
-  ...
   - name: jenkins
     enabled: "{{ enable_jenkins | bool }}"
 ```
